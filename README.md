@@ -55,7 +55,7 @@ Timeline 자체의 동작은 변경할 수 없다는 근본적 제약을 우회:
 선택지 클릭 또는 게임플레이 결과(보스전 피격 여부 등)에 따라 `playableDirector.time`을 조작해 다른 구간으로 점프. 동일 Timeline 내에서 동적 분기를 구현했습니다.
 
 - [선택지 분기 영상](https://www.youtube.com/watch?v=uK7iFyeS7iU)
-- [보스전 분기 영상(마지막에 플레이어가 레이저를 맞을 시, 특수 대사 출력](https://www.youtube.com/watch?v=szLTYYV-Fzw)
+- [보스전 분기 영상(마지막에 플레이어가 레이저를 맞을 시, 특수 대사 출력)](https://www.youtube.com/watch?v=szLTYYV-Fzw)
 
 ---
 
