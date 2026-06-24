@@ -93,21 +93,19 @@ public async UniTask BranchTimelineByChoice(double[] destTimes)
 ## 핵심 코드 구조
 <pre>
 05_FairyTales/
-├── 02_Event/                          # ★ 연출 시스템 (핵심)
-│   ├── 01_Script/                     # EventManager 패밀리 (partial 분리, 트랙 신호 수신)
+├── <a href="02_Event">02_Event/</a>                          # ★ 연출 시스템 (핵심)
+│   ├── <a href="02_Event/01_Script">01_Script/</a>                     # EventManager 패밀리 (partial 분리, 트랙 신호 수신)
 │   │   ├── <a href="02_Event/01_Script/EventManager.cs">EventManager.cs</a>             # 이벤트 허브 진입점
 │   │   ├── <a href="02_Event/01_Script/EventManager_03_Dialogue.cs">EventManager_03_Dialogue.cs</a> # 대사 출력 + 일시정지
 │   │   └── <a href="02_Event/01_Script/EventManager_06_Timeline.cs">EventManager_06_Timeline.cs</a> # 분기 + 점프 (SetSpeed(0)) ★
 │   └── <a href="02_Event/Custom%20Playable">Custom Playable/</a>               # 10종 커스텀 트랙 (각 Behaviour/Clip/Track) ★
-│       ├── <a href="02_Event/Custom%20Playable/Dialogue/DialogueBehaviour.cs">Dialogue/</a>                  # 대사
-│       ├── Choice/                    # 선택지
-│       ├── <a href="02_Event/Custom%20Playable/CharacterAnimation/AnimationBehaviour.cs">CharacterAnimation/</a>        # 캐릭터 애니메이션 (Animator 분리)
-│       ├── CameraControl/ · CameraEffect/ · OverlayCameraControl/   # 카메라 3종
-│       ├── Emotion/ · Sound/          # 감정 버블 · 사운드
-│       └── TimeControl/ · TransformControl/                          # 시간 · 위치 제어
-├── 01_Object/
-│   ├── 01_Player/                     # 플레이어 (상태머신, partial 분리)
+│       ├── <a href="02_Event/Custom%20Playable/Dialogue">Dialogue/</a> · <a href="02_Event/Custom%20Playable/Choice">Choice/</a> · <a href="02_Event/Custom%20Playable/Emotion">Emotion/</a> · <a href="02_Event/Custom%20Playable/Sound">Sound/</a>
+│       ├── <a href="02_Event/Custom%20Playable/CharacterAnimation">CharacterAnimation/</a>        # 캐릭터 애니메이션 (Animator 분리)
+│       ├── <a href="02_Event/Custom%20Playable/CameraControl">CameraControl/</a> · <a href="02_Event/Custom%20Playable/CameraEffect">CameraEffect/</a> · <a href="02_Event/Custom%20Playable/OverlayCameraControl">OverlayCameraControl/</a>
+│       └── <a href="02_Event/Custom%20Playable/TimeControl">TimeControl/</a> · <a href="02_Event/Custom%20Playable/TransformControl">TransformControl/</a>
+├── <a href="01_Object">01_Object/</a>
+│   ├── <a href="01_Object/01_Player">01_Player/</a>                     # 플레이어 (상태머신, partial 분리)
 │   └── <a href="01_Object/03_Boss/Alraune/Phase1">03_Boss/Alraune/</a>           # 보스 (연출 실시간 연동 사례)
-├── 03_Stage/Room/                     # 룸 시스템
-└── 04_System/Manager/                 # Camera · Stage · Sound 등 매니저
+├── <a href="03_Stage/Room">03_Stage/Room/</a>                     # 룸 시스템
+└── <a href="04_System/Manager">04_System/Manager/</a>                 # Camera · Stage · Sound 등 매니저
 </pre>
